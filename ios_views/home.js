@@ -1,25 +1,38 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  Text,
-  View
+  View,
+  NavigatorIOS
 } from 'react-native';
 
 
-class home extends Component {
+class home_views extends Component {
   render() {
     return (
       <View>
-        <Text style = {styles.text}>首页</Text>
+
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 60
+class home extends Component {
+  render() {
+    return(
+      <NavigatorIOS
+          initialRoute={{
+          component: home_views,
+          title: "红狮物流",
+          titleTextColor: '#fff',
+          barTintColor: '#e23f42',
+        }}
+      />
+    );
   }
+}
+
+const styles = StyleSheet.create({
+
 });
 
 module.exports = home

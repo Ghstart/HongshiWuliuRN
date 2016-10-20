@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
+  View,
   Text,
-  View
+  NavigatorIOS
 } from 'react-native';
 
 
-class message extends Component {
+class message_views extends Component {
   render() {
     return (
       <View>
-        <Text style = {styles.text}>消息</Text>
+        <Text>12</Text>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 60
+class message extends Component {
+  render() {
+    return(
+      <NavigatorIOS
+          initialRoute={{
+          component: message_views,
+          title: "消息",
+          titleTextColor: '#fff',
+          barTintColor: '#e23f42',
+        }}
+      />
+    );
   }
+}
+
+const styles = StyleSheet.create({
+
 });
 
 module.exports = message

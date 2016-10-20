@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
+  View,
   Text,
-  View
+  NavigatorIOS
 } from 'react-native';
 
 
-class task extends Component {
+class task_views extends Component {
   render() {
     return (
       <View>
-        <Text style = {styles.text}>任务</Text>
+        <Text>1</Text>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 60
+class task extends Component {
+  render() {
+    return(
+      <NavigatorIOS
+          initialRoute={{
+          component: task_views,
+          title: "任务",
+          titleTextColor: '#fff',
+          barTintColor: '#e23f42',
+        }}
+      />
+    );
   }
+}
+
+const styles = StyleSheet.create({
+
 });
 
 module.exports = task

@@ -1,25 +1,41 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  Text,
-  View
+  View,
+  NavigatorIOS
 } from 'react-native';
 
 
-class setting extends Component {
+class setting_views extends Component {
   render() {
     return (
       <View>
-        <Text style = {styles.text}>设置</Text>
+
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 60
+
+class setting extends Component {
+  render() {
+    return(
+      <NavigatorIOS
+          initialRoute={{
+          component: setting_views,
+          title: "设置",
+          titleTextColor: '#fff',
+          barTintColor: '#e23f42',
+        }}
+      />
+    );
   }
+}
+
+
+const styles = StyleSheet.create({
 });
+
+
 
 module.exports = setting
