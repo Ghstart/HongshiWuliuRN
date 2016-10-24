@@ -17,14 +17,11 @@ class navigator extends Component {
   render() {
 
     return(
-      <NavigatorIOS
-          initialRoute={{
-          component: that.state.navcomponent,
-          title: that.state.navtitle,
-          titleTextColor: '#fff',
-          barTintColor: '#e23f42',
-        }}
-      />
+      <View>
+        <Text>
+          123
+        </Text>
+      </View>
     );
   }
 }
