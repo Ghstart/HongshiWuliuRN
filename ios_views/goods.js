@@ -4,7 +4,8 @@ import {
   View,
   ListView,
   Text,
-  NavigatorIOS
+  NavigatorIOS,
+  Image
 } from 'react-native';
 
 import Nav from './common/navigator'
@@ -33,25 +34,57 @@ class goods_views extends Component {
   }
 
   render() {
-    return (
-      <View style = {styles.container}>
-        <View style = {styles.navView}>
+    return(
+      <View style = {{flexDirection: 'column', backgroundColor: '#f5f5f5', flex: 1}}>
 
+        <View style = {{width: width, height: 64, backgroundColor: '#e23f42', justifyContent: 'center', alignItems: 'center'}}>
+          <Text style = {{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
+            货源
+          </Text>
         </View>
-        <ListView
-          style = {styles.contentView}
+
+        <View style = {{flex: 1}}>
+          <ListView
           dataSource={this.state.dataSource}
           renderRow={(rowData) =>
-            <View style = {styles.cellView}>
-              <View style = {styles.cell}>
-                <Text>{rowData}</Text>
+              <View style = {{height: 255, justifyContent: 'center', alignItems: 'center', marginTop: -20}}>
+                <Image
+                  source={require('./../images/iosbg@2x.png')}
+                />
               </View>
-            </View>
           }
-        />
+          />
+        </View>
+
       </View>
     );
   }
+
+
+  // render() {
+  //   return (
+  //     <View style = {styles.container}>
+  //       <View style = {styles.navView}>
+  //         <Text style = {styles.navTitle}>红狮物流</Text>
+  //       </View>
+  //       <ListView
+  //         style = {styles.contentView}
+  //         dataSource={this.state.dataSource}
+  //         renderRow={(rowData) =>
+  //           <View style = {styles.cellView}>
+  //             <View style = {styles.cell}>
+  //               <Image
+  //                 style = {styles.cellImage}
+  //                 source={require('./../images/iosbg@2x.png')}>
+  //
+  //               </Image>
+  //             </View>
+  //           </View>
+  //         }
+  //       />
+  //     </View>
+  //   );
+  // }
 
   componentDidMount() {
     //
@@ -107,26 +140,7 @@ class goods extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  navView: {
-    backgroundColor: '#e23f42',
-    width: width,
-    height: 64
-  },
-  contentView: {
-    marginTop: -20
-  },
-  cellView: {
-    backgroundColor: 'orange',
-    height: 250,
-  },
-  cell: {
-    backgroundColor: 'green',
-    height: 240,
-    padding: 10
-  }
+
 });
 
 module.exports = goods_views
