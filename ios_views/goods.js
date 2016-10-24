@@ -35,7 +35,7 @@ class goods_views extends Component {
 
   render() {
     return(
-      <View style = {{flexDirection: 'column', backgroundColor: '#f5f5f5', flex: 1}}>
+      <View style = {{flexDirection: 'column', backgroundColor: '#fff', flex: 1}}>
 
         <View style = {{width: width, height: 64, backgroundColor: '#e23f42', justifyContent: 'center', alignItems: 'center'}}>
           <Text style = {{color: '#fff', fontSize: 18, fontWeight: 'bold'}}>
@@ -108,7 +108,53 @@ class goods_views extends Component {
                           <Text style = {{marginTop: 15, marginLeft: 5, fontSize: 12, color: '#999999'}}>金华市</Text>
                       </View>
 
+                    </View>
 
+
+
+                    <View style = {{flexDirection: 'row'}}>
+                      <Image
+                        style = {{marginTop: 15, marginLeft: 15}}
+                        source={require('./../images/description@2x.png')}
+                      />
+
+                      <Text style = {{marginTop: 15, marginLeft: 5, fontSize: 14, color: '#666'}}>烟煤(临海-双狮)</Text>
+
+                      <Text style = {{marginTop: 15, marginLeft: 5, fontSize: 14, color: '#666'}}>2000车</Text>
+                    </View>
+
+                    <View style = {{flexDirection: 'row'}}>
+                      <Image
+                        style = {{marginTop: 15, marginLeft: 15}}
+                        source={require('./../images/description@2x.png')}
+                      />
+
+                      <Text style = {{marginTop: 15, marginLeft: 5, fontSize: 14, color: '#33cccc'}}>一口价</Text>
+
+                      <Text style = {{marginTop: 8, marginLeft: 5, fontSize: 20, color: '#e23f42'}}>60.00</Text>
+
+                      <Text style = {{marginTop: 15, marginLeft: 5, fontSize: 14, color: '#666'}}>元/吨</Text>
+                    </View>
+
+                    <View style = {{flexDirection: 'row'}}>
+                      <Text style = {{marginTop: 5, marginLeft: 15, fontSize: 12, color: '#33cccc'}}>剩余33车</Text>
+                    </View>
+
+                    <View style = {{flexDirection: 'row'}}>
+                    <View style = {{flex:1, flexDirection: 'row'}}>
+                      <Text style = {{marginTop: 15, marginLeft: 15, fontSize: 12, color: '#999'}}>距离您</Text>
+
+                      <Text style = {{marginTop: 15, marginLeft: 1, fontSize: 12, color: '#ff3300'}}>194.8</Text>
+
+                      <Text style = {{marginTop: 15, marginLeft: 1, fontSize: 12, color: '#999'}}>公里 23天前发布</Text>
+                    </View>
+
+                    <View>
+                      <Image
+                        style={{marginTop: 5, marginRight: 15}}
+                        source={require('./../images/order@2x.png')}
+                      />
+                    </View>
 
                     </View>
 
