@@ -10,7 +10,7 @@ class home_views extends Component {
   render() {
     return (
       <View>
-
+      
       </View>
     );
   }

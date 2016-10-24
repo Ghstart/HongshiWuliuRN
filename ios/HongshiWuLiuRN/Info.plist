@@ -28,6 +28,11 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>cz.redlion56.com</key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>localhost</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>

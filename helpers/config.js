@@ -9,9 +9,7 @@ module.exports = {
     }
   },
   api: {
-    base: 'https://facebook.github.io/react-native/',
-    creation: 'movies.json',
-    up: 'movies.json',
-    comment: 'movies.json'
+    base: 'https://cz.redlion56.com/gwcz/',
+    goodsList: 'carrier/auction/getAuctionByType.do'
   }
 }
