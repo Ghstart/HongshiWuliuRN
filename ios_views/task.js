@@ -3,21 +3,25 @@ import {
   StyleSheet,
   View,
   Text,
-  NavigatorIOS
+  NavigatorIOS,
+  ListView
 } from 'react-native';
 
 
 class task_views extends Component {
+  constructor() {
+    super();
+
+  }
   render() {
     return (
-      <View>
-        <Text>1</Text>
-      </View>
+      <Text>12</Text>
     );
   }
 }
 
 class task extends Component {
+
   render() {
     return(
       <NavigatorIOS
@@ -36,4 +40,4 @@ const styles = StyleSheet.create({
 
 });
 
-module.exports = task
+module.exports = task_views

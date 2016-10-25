@@ -39,14 +39,16 @@ class setting_views extends Component {
             style={         {width:viewWidth,height:viewWidth,backgroundColor:"#fff",marginRight: pix / 2, marginBottom: pix/2, justifyContent: 'center', alignItems: 'center'}}>
 
             <Image
+              style={{backgroundColor: 'red'}}
               source={require('./../images/identity@2x.png')}
             />
 
-            <Text style = {{paddingTop: 3}}>
+            <Text style = {{paddingTop: 3, backgroundColor: 'orange'}}>
               实名认证
             </Text>
 
             <Image
+              style={{backgroundColor: 'darkgray', marginTop: 5}}
               source={require('./../images/un@2x.png')}
             />
           </View>

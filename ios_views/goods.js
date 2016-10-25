@@ -5,7 +5,8 @@ import {
   ListView,
   Text,
   NavigatorIOS,
-  Image
+  Image,
+  TouchableHighlight
 } from 'react-native';
 
 import Nav from './common/navigator'
@@ -43,12 +44,15 @@ class goods_views extends Component {
           </Text>
         </View>
 
-        <View style = {{flex: 1}}>
+
+        <View style = {{flex:1}}>
           <ListView
           dataSource={this.state.dataSource}
           renderRow={(rowData) =>
-              <View style = {{height: 255, justifyContent: 'center', alignItems: 'center', marginTop: -20}}>
+              <View style = {{height: 255,justifyContent: 'center', alignItems: 'center', marginTop: -20}}>
                 <Image
+                  resizeMode={Image.resizeMode.stretch}
+                  style={{width: width-20}}
                   source={require('./../images/iosbg@2x.png')}>
 
                   <View style = {{backgroundColor: 'transparent' ,width: width-10, height: 40, flexDirection: 'row'}}>
@@ -174,35 +178,19 @@ class goods_views extends Component {
     );
   }
 
-
-  // render() {
-  //   return (
-  //     <View style = {styles.container}>
-  //       <View style = {styles.navView}>
-  //         <Text style = {styles.navTitle}>红狮物流</Text>
-  //       </View>
-  //       <ListView
-  //         style = {styles.contentView}
-  //         dataSource={this.state.dataSource}
-  //         renderRow={(rowData) =>
-  //           <View style = {styles.cellView}>
-  //             <View style = {styles.cell}>
-  //               <Image
-  //                 style = {styles.cellImage}
-  //                 source={require('./../images/iosbg@2x.png')}>
-  //
-  //               </Image>
-  //             </View>
-  //           </View>
-  //         }
-  //       />
-  //     </View>
-  //   );
-  // }
-
   componentDidMount() {
-    //
-    //this._loadListDatas();
+    var requestURL = 'https://cz.redlion56.com/gwcz/carrier/auction/getAuctionByType.do';
+
+    // var body = {
+    //   currentPage : 1,
+    //   fromType : 1,
+    //   lat : "37.78584",
+    //   lng : "-122.4064",
+    //   pageSize : 10,
+    //   recipientAreaId : '',
+    //   senderAreaId : ''
+    // }
+
   }
 
 
@@ -229,7 +217,7 @@ class goods_views extends Component {
         })
       .then((response) => {
         console.log('1111');
-        console.log(response);
+        console.log(JSON.parse(response));
       })
       .catch((error) => {
         console.error(error);
