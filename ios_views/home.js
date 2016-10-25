@@ -30,25 +30,24 @@ class home_views extends Component {
           <View style={{width: width, height: 150, backgroundColor: 'blue', marginTop: -20}}>
              <Swiper style={styles.wrapper} showsButtons={false} height={150} width={width} automaticallyAdjustContentInsets = {true} autoplay={true} bounces={true}>
                   <Image
-                    style={{justifyContent: 'center', alignItems: 'center', width: width}}
+                    style={styles.wrapImage}
                     resizeMode={Image.resizeMode.stretch}
                     source={require('./../images/fast_01.png')}
                   />
 
                   <Image
-                    style={{justifyContent: 'center', alignItems: 'center', width: width}}
+                    style={styles.wrapImage}
                     resizeMode={Image.resizeMode.stretch}
                     source={require('./../images/fast_02.png')}
                   />
                   <Image
-                    style={{justifyContent: 'center', alignItems: 'center', width: width}}
+                    style={styles.wrapImage}
                     resizeMode={Image.resizeMode.stretch}
                     source={require('./../images/fast_03.png')}
                   />
-
-
                   <Image
-                    style={{justifyContent: 'center', alignItems: 'center', width: width}}
+                    style={styles.wrapImage}
+                    resizeMode={Image.resizeMode.stretch}
                     source={require('./../images/fast_04.png')}
                   />
               </Swiper>
@@ -136,8 +135,8 @@ const styles = StyleSheet.create({
     wrapImage: {
       justifyContent: 'center',
       alignItems: 'center',
+      width: width
     },
-
     text: {
       color: '#fff',
       fontSize: 30,
