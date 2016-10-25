@@ -13,7 +13,7 @@ import Util     from '../helpers/Util'
 import Swiper from 'react-native-swiper';
 
 const width = Util.size.width;
-
+const scrollHeight = Util.size.height - 64 - 49;
 
 class home_views extends Component {
   render() {
@@ -25,64 +25,80 @@ class home_views extends Component {
             首页
           </Text>
         </View>
-        <ScrollView>
-          <Swiper style={styles.wrapper} showsButtons={false} height={150} autoplay={true}>
-            <View style={styles.slide1}>
-              <Text style={styles.text}>Hello Swiper</Text>
-            </View>
-            <View style={styles.slide2}>
-              <Text style={styles.text}>Beautiful</Text>
-            </View>
-            <View style={styles.slide3}>
-              <Text style={styles.text}>And simple</Text>
-            </View>
-          </Swiper>
 
-          <View style={{width: width, height: 195, backgroundColor: 'white', flexDirection:'row'}}>
-            <View style={{backgroundColor: '#ec605f', flex: 0.5, margin: 5, marginRight: 2.5, marginBottom: 2.5, borderRadius: 5}}>
-              <Image
-                style={{marginLeft: 30, marginTop: 30}}
-                source={require('./../images/fast_ca.png')}
-              />
-            </View>
-            <View style={{backgroundColor: 'white', flex: 0.5, margin: 5, marginLeft: 2.5, marginBottom: 2.5, borderRadius: 5, flexDirection: 'column'}}>
-              <View style={{backgroundColor: '#ff9900', flex: 0.5, marginBottom: 2.5, borderRadius: 5}}>
+        <ScrollView style={{height: scrollHeight, flex: 1}}>
+          <View style={{width: width, height: 150, backgroundColor: 'blue', marginTop: -20}}>
+             <Swiper style={styles.wrapper} showsButtons={false} height={150} width={width} automaticallyAdjustContentInsets = {true} autoplay={true} bounces={true}>
+                  <Image
+                    style={{justifyContent: 'center', alignItems: 'center', width: width}}
+                    resizeMode={Image.resizeMode.stretch}
+                    source={require('./../images/fast_01.png')}
+                  />
+
+                  <Image
+                    style={{justifyContent: 'center', alignItems: 'center', width: width}}
+                    resizeMode={Image.resizeMode.stretch}
+                    source={require('./../images/fast_02.png')}
+                  />
+                  <Image
+                    style={{justifyContent: 'center', alignItems: 'center', width: width}}
+                    resizeMode={Image.resizeMode.stretch}
+                    source={require('./../images/fast_03.png')}
+                  />
+
+
+                  <Image
+                    style={{justifyContent: 'center', alignItems: 'center', width: width}}
+                    source={require('./../images/fast_04.png')}
+                  />
+              </Swiper>
+          </View>
+
+
+
+          <View style={{flex: 1}}>
+            <View style={{width: width, height: 195, backgroundColor: 'white', flexDirection:'row'}}>
+
+              <View style={{backgroundColor: '#ec605f', flex: 0.5, margin: 5, marginRight: 2.5, marginBottom: 2.5, borderRadius: 5, justifyContent: 'center', alignItems: 'center'}}>
                 <Image
-                  style={{marginLeft: 30, marginTop: 30}}
-                  source={require('./../images/gh_fast_tr.png')}
+                  source={require('./../images/fast_ca.png')}
                 />
               </View>
-              <View style={{backgroundColor: '#fbbe2f', flex: 0.5, marginTop: 2.5, borderRadius: 5}}>
+              <View style={{backgroundColor: 'white', flex: 0.5, margin: 5, marginLeft: 2.5, marginBottom: 2.5, borderRadius: 5, flexDirection: 'column'}}>
+                <View style={{backgroundColor: '#ff9900', flex: 0.5, marginBottom: 2.5, borderRadius: 5, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image
+                    source={require('./../images/gh_fast_tr.png')}
+                  />
+                </View>
+                <View style={{backgroundColor: '#fbbe2f', flex: 0.5, marginTop: 2.5, borderRadius: 5, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image
+                    source={require('./../images/fast_bi.png')}
+                  />
+                </View>
+              </View>
+            </View>
+
+            <View style={{width: width, height: 195, backgroundColor: 'white', flexDirection:'row'}}>
+              <View style={{backgroundColor: 'white', flex: 0.5, margin: 5, marginRight: 2.5, marginTop: 2.5, borderRadius: 5, flexDirection: 'column'}}>
+                <View style={{backgroundColor: '#00c9c2', flex: 0.5, marginBottom: 2.5, borderRadius: 5, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image
+                    source={require('./../images/fast_sc.png')}
+                  />
+                </View>
+                <View style={{backgroundColor: '#05b0f5', flex: 0.5, marginTop: 2.5, borderRadius: 5, justifyContent: 'center', alignItems: 'center'}}>
+                  <Image
+                    source={require('./../images/fast_co.png')}
+                  />
+                </View>
+              </View>
+              <View style={{backgroundColor: '#4b95fe', flex: 0.5, margin: 5, marginLeft: 2.5, marginTop: 2.5, borderRadius: 5, justifyContent: 'center', alignItems: 'center'}}>
                 <Image
-                  style={{marginLeft: 30, marginTop: 30}}
-                  source={require('./../images/fast_bi.png')}
+                  source={require('./../images/gh_fast_as.png')}
                 />
               </View>
             </View>
           </View>
 
-          <View style={{width: width, height: 195, backgroundColor: 'white', flexDirection:'row'}}>
-            <View style={{backgroundColor: 'white', flex: 0.5, margin: 5, marginRight: 2.5, marginTop: 2.5, borderRadius: 5, flexDirection: 'column'}}>
-              <View style={{backgroundColor: '#00c9c2', flex: 0.5, marginBottom: 2.5, borderRadius: 5}}>
-                <Image
-                  style={{marginLeft: 30, marginTop: 30}}
-                  source={require('./../images/fast_sc.png')}
-                />
-              </View>
-              <View style={{backgroundColor: '#05b0f5', flex: 0.5, marginTop: 2.5, borderRadius: 5}}>
-                <Image
-                  style={{marginLeft: 30, marginTop: 30}}
-                  source={require('./../images/fast_co.png')}
-                />
-              </View>
-            </View>
-            <View style={{backgroundColor: '#4b95fe', flex: 0.5, margin: 5, marginLeft: 2.5, marginTop: 2.5, borderRadius: 5}}>
-              <Image
-                style={{marginLeft: 30, marginTop: 30}}
-                source={require('./../images/gh_fast_as.png')}
-              />
-            </View>
-          </View>
         </ScrollView>
 
 
@@ -114,26 +130,14 @@ const styles = StyleSheet.create({
 
     },
     wrapper: {
+      backgroundColor: 'orange',
+      marginTop: 0
+    },
+    wrapImage: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
 
-    },
-    slide1: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#9DD6EB',
-    },
-    slide2: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#97CAE5',
-    },
-    slide3: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#92BBD9',
-    },
     text: {
       color: '#fff',
       fontSize: 30,
