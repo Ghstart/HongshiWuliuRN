@@ -65,7 +65,7 @@ class HongshiWuLiuRN extends Component {
         <TabBarIOS.Item
           title = "任务"
           selected = { this.state.selected === 'task' }
-          icon = {require('./images/mission@2x.png')}
+          icon = {require('./images/mission.png')}
           selectedIcon={require('./images/mission-1@2x.png')}
           onPress = {() => {
             this.setState({
