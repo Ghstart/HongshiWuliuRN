@@ -9,8 +9,6 @@ supported:
 iOS >= 8.0
 Andriod >= 4.1
 
-### Steps:
----
 1. `npm install`
 ---
 2. `react-native run-ios` / Open xcode build and run
