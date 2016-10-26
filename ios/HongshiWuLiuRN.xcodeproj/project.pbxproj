@@ -23,6 +23,8 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		F7D00B2E1DC08C0000DA4B0E /* HSWLROOTCA.crt in Resources */ = {isa = PBXBuildFile; fileRef = F7D00B2C1DC08C0000DA4B0E /* HSWLROOTCA.crt */; };
+		F7D00B2F1DC08C0000DA4B0E /* HSWLROOTCAforInternalTest.crt in Resources */ = {isa = PBXBuildFile; fileRef = F7D00B2D1DC08C0000DA4B0E /* HSWLROOTCAforInternalTest.crt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		F7D00B2C1DC08C0000DA4B0E /* HSWLROOTCA.crt */ = {isa = PBXFileReference; lastKnownFileType = file; path = HSWLROOTCA.crt; sourceTree = "<group>"; };
+		F7D00B2D1DC08C0000DA4B0E /* HSWLROOTCAforInternalTest.crt */ = {isa = PBXFileReference; lastKnownFileType = file; path = HSWLROOTCAforInternalTest.crt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				F7D00B2C1DC08C0000DA4B0E /* HSWLROOTCA.crt */,
+				F7D00B2D1DC08C0000DA4B0E /* HSWLROOTCAforInternalTest.crt */,
 			);
 			name = HongshiWuLiuRN;
 			sourceTree = "<group>";
@@ -512,6 +518,8 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				F7D00B2F1DC08C0000DA4B0E /* HSWLROOTCAforInternalTest.crt in Resources */,
+				F7D00B2E1DC08C0000DA4B0E /* HSWLROOTCA.crt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

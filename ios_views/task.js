@@ -45,15 +45,20 @@ class task_views extends Component {
               <View style={styles.taskCell}>
                 <View style={styles.taskCellView}>
                   {/*顶部视图*/}
-                  <View>
-
+                  <View style={{flexDirection: 'row', width: width, height: 40}}>
+                    <Text style={{fontSize: 14, color:'#666666', flex: 0.5}}>
+                      2015年7月7日
+                    </Text>
+                    <Text style={{fontSize: 14, color:'#76aee9', flex:0.5}}>
+                      运输中
+                    </Text>
                   </View>
                   {/*顶部线*/}
-                  <View>
+                  <View style={{backgroundColor:'#cccccc', width: width, height:0.5}}>
 
                   </View>
                   {/*中部视图*/}
-                  <View>
+                  <View style={{flex: 1}}>
 
                   </View>
                   {/*中部线*/}
@@ -64,7 +69,7 @@ class task_views extends Component {
                   <View>
 
                   </View>
-                  
+
                 </View>
               </View>
 

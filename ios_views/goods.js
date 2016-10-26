@@ -179,8 +179,8 @@ class goods_views extends Component {
   }
 
   componentDidMount() {
-    var requestURL = 'https://cz.redlion56.com/gwcz/carrier/auction/getAuctionByType.do';
-
+    var requestURL = 'https://cz.redlion56.com/gwcz/commonservice/basic/featchInfo.do';
+    this._loadListDatas()
     // var body = {
     //   currentPage : 1,
     //   fromType : 1,
@@ -198,7 +198,7 @@ class goods_views extends Component {
   _loadListDatas() {
     console.log('start request datas...');
 
-    var requestURL = config.api.base + config.api.goodsList;
+    var requestURL = 'https://cz.redlion56.com/gwcz/commonservice/basic/featchInfo.do';
 
     var body = {
       currentPage: 1,
@@ -215,10 +215,12 @@ class goods_views extends Component {
           method: 'POST',
           body: JSON.stringify(body)
         })
-      .then((response) => {
-        console.log('1111');
-        console.log(JSON.parse(response));
-      })
+        .then((response) => response.json())
+        .then((responseJson) => {
+          console.log(responseJson);
+          console.log('111');
+          return responseJson;
+        })
       .catch((error) => {
         console.error(error);
         console.log('222');

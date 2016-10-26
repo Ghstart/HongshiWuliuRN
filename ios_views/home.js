@@ -16,6 +16,30 @@ const width = Util.size.width;
 const scrollHeight = Util.size.height - 64 - 49;
 
 class home_views extends Component {
+
+  componentDidMount() {
+    // this.getMoviesFromApiAsync()
+  }
+
+  getMoviesFromApiAsync() {
+   return fetch('https://cz.redlion56.com/gwcz/carrier/auction/getAuctionByType.do', {
+    method: 'POST',
+    body: JSON.stringify({
+      firstParam: 'yourValue',
+      secondParam: 'yourOtherValue',
+    })
+   })
+     .then((response) => response.json())
+     .then((responseJson) => {
+       console.log(responseJson);
+       console.log('111');
+       return responseJson.movies;
+     })
+     .catch((error) => {
+       console.log(error);
+     });
+ }
+
   render() {
     return (
       <View style = {{flexDirection: 'column', backgroundColor: '#f5f5f5', flex: 1}}>
