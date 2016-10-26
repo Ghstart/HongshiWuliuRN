@@ -6,15 +6,15 @@ HongshiWuliu App using React native
 
 
 supported:
-### iOS >= 8.0
-### Andriod >= 4.1
-
-
-
+iOS >= 8.0
+Andriod >= 4.1
+     
+      
+       
 -------------------------
+          
+1. `npm install`
+             
+2. `react-native run-ios` / Open xcode build and run
 
-`npm install`
----
-`react-native run-ios` / Open xcode build and run
----
-'react-native start` / `react-native run-android` / Open Android Studio and run
+3. `react-native start`  /  `react-native run-android`  /  Open Android Studio and run
