@@ -9,26 +9,24 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  DrawerLayoutAndroid
 } from 'react-native';
 
+import ScrollableTabView, {DefaultTabBar, } from 'react-native-scrollable-tab-view';
+
 export default class HongshiWuLiuRN extends Component {
+
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+  return <ScrollableTabView
+    style={{marginTop: 20}}
+    renderTabBar={() => <DefaultTabBar />}
+  >
+    <Text tabLabel='Tab #1'>My</Text>
+    <Text tabLabel='Tab #2'>favorite</Text>
+    <Text tabLabel='Tab #3'>project</Text>
+  </ScrollableTabView>;
+}
 }
 
 const styles = StyleSheet.create({

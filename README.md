@@ -3,6 +3,7 @@ HongshiWuliu App using React native
 
 supported:
 iOS >= 8.0
+Andriod >= 4.1
 
 Steps:
 1. npm install

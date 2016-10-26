@@ -137,3 +137,12 @@ task copyDownloadableDepsToLibs(type: Copy) {
   from configurations.compile
   into 'libs'
 }
+
+
+task bundleJSTask(type: Exec, description: '打包JS文件并放到指定位置'){
+    workingDir  '../'
+    commandLine 'cmd', '/c',  'bundleJs.bat'
+    ext.output = {
+        return standardOutput.toString()
+    }
+}
