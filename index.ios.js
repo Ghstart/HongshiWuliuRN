@@ -4,16 +4,19 @@ import {
   StyleSheet,
   Text,
   View,
-  TabBarIOS
+  TabBarIOS,
+  Navigator
 } from 'react-native';
 
 import Task     from './ios_views/task';
-import Goods    from './ios_views/goods'
+// import Goods    from './ios_views/goods'
 import Home     from './ios_views/home'
 import Message  from './ios_views/message'
 import Setting  from './ios_views/setting'
 
 import Util     from './helpers/Util'
+
+var goods = require('./ios_views/goods');
 
 class HongshiWuLiuRN extends Component {
   constructor() {
@@ -29,11 +32,6 @@ class HongshiWuLiuRN extends Component {
       case 'task':
         return (
           <Task/>
-        );
-        break;
-      case 'goods':
-        return (
-          <Goods/>
         );
         break;
       case 'home':
@@ -89,8 +87,23 @@ class HongshiWuLiuRN extends Component {
             })
           }}>
 
+          <Navigator
+          initialRoute={{
+            name: 'list',
+            component: goods
+          }}
+          configureScene={(route) => {
+            return Navigator.SceneConfigs.FloatFromRight
+          }}
+          renderScene={(route, navigator) => {
+            var Component = route.component
 
-          {this._renderView(this.state.selected)}
+            return <Component {...route.params} navigator={navigator}/>
+          }}
+          />
+
+
+          {/* {this._renderView(this.state.selected)} */}
 
         </TabBarIOS.Item>
 

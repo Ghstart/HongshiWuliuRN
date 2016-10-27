@@ -6,7 +6,8 @@ import {
   Text,
   NavigatorIOS,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 
 import Nav from './common/navigator'
@@ -14,11 +15,13 @@ import Util     from '../helpers/Util'
 import request  from '../helpers/request'
 import config   from '../helpers/config'
 
+var Detail      = require('./goodsdetail')
+
 const width = Util.size.width;
 
 class goods_views extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     var datas = []
     for(var i = 0; i < 10; i++) {
@@ -153,12 +156,12 @@ class goods_views extends Component {
                       <Text style = {{marginTop: 15, marginLeft: 1, fontSize: 12, color: '#999'}}>公里 23天前发布</Text>
                     </View>
 
-                    <View>
+                    <TouchableOpacity onPress = {this._onPressButton.bind(this)}>
                       <Image
                         style={{marginTop: 5, marginRight: 15}}
                         source={require('./../images/order@2x.png')}
                       />
-                    </View>
+                    </TouchableOpacity>
 
                     </View>
 
@@ -176,6 +179,16 @@ class goods_views extends Component {
 
       </View>
     );
+  }
+
+  _onPressButton() {
+    this.props.navigator.push({
+        name:'detail',
+        component: Detail,
+        params: {
+          extraData: '123'
+        }
+      })
   }
 
   componentDidMount() {
@@ -238,6 +251,7 @@ class goods extends Component {
           titleTextColor: '#fff',
           barTintColor: '#e23f42',
         }}
+        navigationBarHidden = {false}
       />
     );
   }
